@@ -83,7 +83,7 @@ npm start
 
 You should see:
 ```
-🌍 SubtitleX Backend — http://localhost:3000
+🌍 LingoTitles Backend — http://localhost:3000
    Groq Whisper: ✓ free & ready
    Lingo.dev:   ✓ free & ready
 ```
