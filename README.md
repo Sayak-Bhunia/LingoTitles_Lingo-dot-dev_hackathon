@@ -118,7 +118,8 @@ You should see:
 
 ## Architecture
 
-<img width="2189" height="1425" alt="image" src="https://github.com/user-attachments/assets/4be40d3b-e86b-499a-9a3a-01a5474ba113" />
+<img width="2211" height="1035" alt="image" src="https://github.com/user-attachments/assets/95b5ef4d-18fa-47da-97b2-eee5c90c714e" />
+
 
 
 ---
