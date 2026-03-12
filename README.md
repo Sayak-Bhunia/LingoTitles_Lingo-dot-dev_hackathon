@@ -1,6 +1,7 @@
 # LingoTitles - Real-Time AI Subtitles for Any Video
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/630aeac8-8b30-4e26-ac62-f113ed53655c" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/691d0c87-2082-4492-99d0-6f5a63dfea4e" />
+
 [![Demo Video](https://img.youtube.com/vi/DEMO_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=DEMO_VIDEO_ID)
 
 **Demo:** In case the app is not working, you can watch the demo video above to see how LingoTitles works.
