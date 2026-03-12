@@ -144,18 +144,6 @@ You should see:
 
 ---
 
-## Problems I Solved
-
-| Problem | Fix |
-|---|---|
-| Chrome blocks content scripts from calling localhost | Routed all fetch calls through background service worker |
-| Groq rejects files without extensions | Copy upload to `.webm` before sending |
-| Lingo.dev rejects short locale codes like `ja` | Built a locale map converting `ja` → `ja-JP` |
-| Subtitles not visible on YouTube | Used `position: fixed` with max `z-index` |
-| Audio chunks too small to transcribe | Added minimum size guard — skip if under 1000 bytes |
-
----
-
 ## Environment Variables
 
 | Variable | Required | Description |
