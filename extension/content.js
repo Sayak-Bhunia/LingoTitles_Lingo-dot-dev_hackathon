@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  console.log('[SubtitleX] content.js loaded ✓');
+  console.log('[LingoTitles] content.js loaded ✓');
 
   let cfg = {
     enabled:       false,
@@ -24,7 +24,7 @@
     ['enabled','sourceLang','targetLang','displayMode','chunkInterval','backendUrl'],
     data => {
       Object.assign(cfg, data);
-      console.log('[SubtitleX] Settings loaded, enabled:', cfg.enabled);
+      console.log('[LingoTitles] Settings loaded, enabled:', cfg.enabled);
       if (cfg.enabled) init();
     }
   );
@@ -65,7 +65,7 @@
 
   function attach(video) {
     if (isCapturing) return;
-    console.log('[SubtitleX] Attaching to video');
+    console.log('[LingoTitles] Attaching to video');
     currentVideo = video;
     buildOverlay();
     startCapture(video);
@@ -74,9 +74,9 @@
   function buildOverlay() {
     if (subtitleEl) subtitleEl.remove();
     subtitleEl = document.createElement('div');
-    subtitleEl.className = 'subtitlex-overlay';
+    subtitleEl.className = 'LingoTitles-overlay';
     document.body.appendChild(subtitleEl);
-    console.log('[SubtitleX] Overlay created');
+    console.log('[LingoTitles] Overlay created');
   }
 
   function showSubtitles(original, translated) {
@@ -85,7 +85,7 @@
 
     if (cfg.displayMode === 'dual' && original) {
       const o = document.createElement('div');
-      o.className = 'subtitlex-original';
+      o.className = 'LingoTitles-original';
       o.textContent = original;
       subtitleEl.appendChild(o);
     }
@@ -93,15 +93,15 @@
     const text = cfg.displayMode === 'original' ? original : (translated || original);
     if (text) {
       const t = document.createElement('div');
-      t.className = 'subtitlex-text';
+      t.className = 'LingoTitles-text';
       t.textContent = text;
       subtitleEl.appendChild(t);
     }
 
-    subtitleEl.classList.add('subtitlex-visible');
+    subtitleEl.classList.add('LingoTitles-visible');
     clearTimeout(subtitleEl._timer);
     subtitleEl._timer = setTimeout(
-      () => subtitleEl && subtitleEl.classList.remove('subtitlex-visible'),
+      () => subtitleEl && subtitleEl.classList.remove('LingoTitles-visible'),
       Math.max(cfg.chunkInterval * 1.5, 3500)
     );
   }
@@ -114,9 +114,9 @@
       const dest = audioCtx.createMediaStreamDestination();
       src.connect(dest);
       beginRecording(dest.stream);
-      console.log('[SubtitleX] Direct audio capture started');
+      console.log('[LingoTitles] Direct audio capture started');
     } catch (err) {
-      console.warn('[SubtitleX] Direct capture failed:', err.message, '— trying mic');
+      console.warn('[LingoTitles] Direct capture failed:', err.message, '— trying mic');
       micFallback();
     }
   }
@@ -125,9 +125,9 @@
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       beginRecording(stream);
-      console.log('[SubtitleX] Mic fallback started');
+      console.log('[LingoTitles] Mic fallback started');
     } catch (e) {
-      console.error('[SubtitleX] All capture methods failed:', e.message);
+      console.error('[LingoTitles] All capture methods failed:', e.message);
     }
   }
 
@@ -181,7 +181,7 @@
       for (let i = 0; i < bytes.length; i++) binary += String.fromCharCode(bytes[i]);
       const audioBase64 = btoa(binary);
 
-      console.log('[SubtitleX] Sending chunk via background, size:', blob.size);
+      console.log('[LingoTitles] Sending chunk via background, size:', blob.size);
 
       chrome.runtime.sendMessage({
         type:       'TRANSCRIBE',
@@ -192,20 +192,20 @@
         backendUrl: cfg.backendUrl
       }, response => {
         if (chrome.runtime.lastError) {
-          console.error('[SubtitleX] Message error:', chrome.runtime.lastError.message);
+          console.error('[LingoTitles] Message error:', chrome.runtime.lastError.message);
           return;
         }
         if (!response || response.error) {
-          console.warn('[SubtitleX] Backend error:', response?.error);
+          console.warn('[LingoTitles] Backend error:', response?.error);
           return;
         }
-        console.log('[SubtitleX] Got subtitle:', response.original, '→', response.translated);
+        console.log('[LingoTitles] Got subtitle:', response.original, '→', response.translated);
         if (response.original && response.original.trim()) {
           showSubtitles(response.original.trim(), response.translated?.trim());
         }
       });
     } catch (err) {
-      console.error('[SubtitleX] sendChunk error:', err.message);
+      console.error('[LingoTitles] sendChunk error:', err.message);
     }
   }
 
@@ -215,7 +215,7 @@
     if (recorder && recorder.state !== 'inactive') try { recorder.stop(); } catch(_) {}
     if (audioCtx) try { audioCtx.close(); } catch(_) {}
     recorder = null; audioCtx = null;
-    if (subtitleEl) subtitleEl.classList.remove('subtitlex-visible');
+    if (subtitleEl) subtitleEl.classList.remove('LingoTitles-visible');
   }
 
 })();
