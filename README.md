@@ -29,17 +29,17 @@ LingoTitles is a Chrome extension that generates real-time AI-powered subtitles 
 ```
 lingodev2/
 ├── backend/
-│   ├── server.js
+│   ├── server.js           # Express server — Groq + Lingo.dev handler
 │   ├── package.json
-│   ├── .env                
-│   └── uploads/            
+│   ├── .env                # API keys (never commit this)
+│   └── uploads/            # Temporary audio storage (auto-cleaned)
 └── extension/
-    ├── manifest.json        
-    ├── background.js        
-    ├── content.js           
-    ├── subtitles.css        
-    ├── popup.html           
-    ├── popup.js
+    ├── manifest.json        # Chrome MV3 manifest
+    ├── background.js        # Service worker — proxies fetch to backend
+    ├── content.js           # Audio capture + subtitle overlay
+    ├── subtitles.css        # Subtitle styling
+    ├── popup.html           # Extension popup UI
+    ├── popup.js             # Popup logic
     └── icons/
         ├── icon16.png
         ├── icon48.png
@@ -110,8 +110,8 @@ You should see:
 
 ## Current Features
 
-- **Any Video** — works on YouTube, news sites, Instagram, any HTML5 video
-- **35+ Languages** — Japanese, Bengali, Marathi, Tamil, Hindi, Arabic, Spanish and more
+- **Any Video** — works on YouTube, news sites, and other third-party video streaming platforms
+- **35+ Languages** — Japanese, Bengali, Marathi, Tamil, Hindi, Arabic, Spanish and more — manually select source and target language
 - **Dual Mode** — show translated only, original only, or both
 - **Adjustable chunk interval** — 1.5s for fast reels, 3s for anime/news, 5s for slow speech
 - **Zero cost** — Groq and Lingo.dev are both free tiers
@@ -119,32 +119,10 @@ You should see:
 
 ---
 
-## Deploying the Backend
-
-To use LingoTitles without running a local server:
-
-1. Push this repo to GitHub
-2. Go to [railway.app](https://railway.app) → New Project → Deploy from GitHub
-3. Set **Root Directory** to `backend`
-4. Add environment variables:
-   - `GROQ_API_KEY`
-   - `LINGODOTDEV_API_KEY`
-5. Click Deploy — Railway auto-detects Node.js and runs `npm start`
-6. Copy your Railway URL (e.g. `https://lingotitles-backend.up.railway.app`)
-7. In `extension/popup.js` update:
-```javascript
-const BACKEND_URL = 'https://lingotitles-backend.up.railway.app';
-```
-8. Reload the extension in Chrome
-
----
-
 ## Future Scope
 
-- **Auto language detection** — detect source language automatically using `franc`
 - **Subtitle styling** — font size, color, position customization
 - **Word-by-word streaming** — WebSocket architecture for near real-time subtitles
-- **Netflix / Hotstar / Prime support** — handle DRM-protected video streams
 - **Mobile companion app** — iOS and Android support
 - **Offline mode** — on-device Whisper model for privacy
 
@@ -168,4 +146,3 @@ const BACKEND_URL = 'https://lingotitles-backend.up.railway.app';
 |---|---|---|
 | `GROQ_API_KEY` | Yes | Groq API key for Whisper transcription |
 | `LINGODOTDEV_API_KEY` | Yes | Lingo.dev API key for translation |
-| `PORT` | No | Server port (defaults to 3000) |
