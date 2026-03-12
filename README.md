@@ -118,7 +118,8 @@ You should see:
 
 ## Architecture
 
-> Architecture diagram coming soon.
+<img width="2189" height="1425" alt="image" src="https://github.com/user-attachments/assets/4be40d3b-e86b-499a-9a3a-01a5474ba113" />
+
 
 ---
 
