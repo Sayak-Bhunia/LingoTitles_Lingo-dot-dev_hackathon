@@ -1,6 +1,6 @@
 const $ = id => document.getElementById(id);
 
-const BACKEND_URL = 'http://localhost:3000'; // change this when deploying
+const BACKEND_URL = 'https://lingotitles-lingo-dot-dev-hackathon.onrender.com'; 
 
 async function load() {
   const d = await chrome.storage.local.get(
