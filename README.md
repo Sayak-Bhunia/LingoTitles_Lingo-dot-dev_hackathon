@@ -12,7 +12,7 @@ LingoTitles is a Chrome extension that generates real-time AI-powered subtitles 
 
 ## Why LingoTitles Exists — Real Problems It Solves
 
-### 1. YouTube's Auto-Subtitles Are Unreliable
+### 1. Streaming Platform's Auto-Subtitles Are Unreliable
 YouTube offers auto-generated subtitles for many languages but they are often inaccurate, mistimed, and not natural to read. For languages like Japanese, Bengali, or Arabic the quality drops significantly. LingoTitles uses Groq Whisper + Lingo.dev to generate subtitles that are more accurate, context-aware, and actually readable — on YouTube and everywhere else.
 
 ### 2. Breaking News From Conflict Zones
