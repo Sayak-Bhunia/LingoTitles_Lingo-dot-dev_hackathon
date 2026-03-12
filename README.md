@@ -29,17 +29,17 @@ LingoTitles is a Chrome extension that generates real-time AI-powered subtitles 
 ```
 lingodev2/
 ├── backend/
-│   ├── server.js           # Express server — Groq + Lingo.dev handler
+│   ├── server.js
 │   ├── package.json
-│   ├── .env                # API keys (never commit this)
-│   └── uploads/            # Temporary audio storage (auto-cleaned)
+│   ├── .env                
+│   └── uploads/            
 └── extension/
-    ├── manifest.json        # Chrome MV3 manifest
-    ├── background.js        # Service worker — proxies fetch to backend
-    ├── content.js           # Audio capture + subtitle overlay
-    ├── subtitles.css        # Subtitle styling
-    ├── popup.html           # Extension popup UI
-    ├── popup.js             # Popup logic
+    ├── manifest.json        
+    ├── background.js        
+    ├── content.js           
+    ├── subtitles.css        
+    ├── popup.html           
+    ├── popup.js
     └── icons/
         ├── icon16.png
         ├── icon48.png
