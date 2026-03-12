@@ -1,4 +1,4 @@
-# LingoTitles - Real-Time AI Subtitles for Any Video
+# LingoTitles - Real-Time Subtitles for Any Video
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/691d0c87-2082-4492-99d0-6f5a63dfea4e" />
 
