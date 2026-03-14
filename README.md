@@ -22,17 +22,10 @@ If you don't speak that language you have no idea what they are warning about, w
 
 ## Technologies Used
 
-### Chrome Extension
-- **Manifest V3** - Latest Chrome extension architecture
-- **Web Audio API** - Captures video audio stream directly (no microphone needed)
-- **Content Script** - Detects video elements and renders subtitle overlay
-- **Background Service Worker** - Proxies API calls to bypass Chrome's localhost restrictions
-
-### Backend
-- **Node.js + Express** - REST API server
-- **Groq Whisper Large V3 Turbo** - Free, ultra-fast speech-to-text (~300ms)
-- **Lingo.dev** - AI-powered real-time translation (free)
-- **Multer** - Audio file handling
+- **Node.js + Express**: REST API server
+- **Groq Whisper Large V3 Turbo**: Free, ultra-fast speech-to-text (~300ms)
+- **Lingo.dev**: AI-powered real-time translation 
+- **Multer**: Audio file handling
 
 ---
 
