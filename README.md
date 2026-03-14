@@ -1,10 +1,10 @@
-# LingoTitles - Real-Time Subtitles for Any Video
+# LingoTitles - Real-Time Multilingual Subtitles for Any Video
 
 [![Watch the Demo](https://img.youtube.com/vi/7eCA78y68_M/maxresdefault.jpg)](https://youtu.be/7eCA78y68_M)
 
 **Demo:** In case the app is not working, you can watch the demo video above to see how LingoTitles works.
 
-LingoTitles is a Chrome extension that generates real-time AI-powered subtitles for any video on the internet. It captures the video audio, transcribes it using Groq's Whisper model, translates it using Lingo.dev, and overlays the subtitles directly on the video all in under 2 seconds, completely free.
+LingoTitles is a Chrome extension that generates real-time subtitles in any selected language for any video on the internet. It captures the video audio, transcribes it using Groq's Whisper model, translates it using Lingo.dev, and overlays the subtitles directly on the video all in under 2 seconds, completely free.
 
 ---
 
