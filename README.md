@@ -1,9 +1,5 @@
 # LingoTitles - Real-Time Subtitles for Any Video
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/691d0c87-2082-4492-99d0-6f5a63dfea4e" />
-
-## 🎬 Demo Video
-
 [![Watch the Demo](https://img.youtube.com/vi/7eCA78y68_M/maxresdefault.jpg)](https://youtu.be/7eCA78y68_M)
 
 **Demo:** In case the app is not working, you can watch the demo video above to see how LingoTitles works.
