@@ -11,12 +11,12 @@ LingoTitles is a Chrome extension that generates real-time AI-powered subtitles 
 ## Why LingoTitles Exists — Real Problems It Solves
 
 ### 1. Streaming Platform's Auto-Subtitles Are Unreliable
-YouTube offers auto-generated subtitles for many languages but they are often inaccurate, mistimed, and not natural to read. For languages like Japanese, Bengali, or Arabic the quality drops significantly. LingoTitles uses Groq Whisper + Lingo.dev to generate subtitles that are more accurate, context-aware, and actually readable — on YouTube and everywhere else.
+YouTube offers auto-generated subtitles for many languages but they are often inaccurate, mistimed, and not natural to read. For languages like Japanese, Bengali, or Arabic the quality drops significantly. LingoTitles uses Groq Whisper + Lingo.dev to generate subtitles that are more accurate, context-aware, and actually readable on YouTube and everywhere else.
 
 ### 2. Breaking News From Conflict Zones
-We are living in a world of active conflicts and natural disasters. The first footage from any crisis — a war zone, a tsunami warning, a flood — is almost always filmed by someone on the ground, a local victim or witness, speaking their native language. By the time that video reaches social media it has no subtitles, no translation, nothing.
+We are living in a world of active conflicts and natural disasters. The first footage from any crisis a war zone, a tsunami warning, a flood — is almost always filmed by someone on the ground, a local victim or witness, speaking their native language. By the time that video reaches social media it has no subtitles, no translation, nothing.
 
-If you don't speak that language you have no idea what they are warning about, what risks are approaching, or what is actually happening on the ground. This is not just inconvenient — it can be dangerous. LingoTitles solves this directly. Any video, any language, real-time subtitles in your language — so critical information reaches you regardless of the language barrier.
+If you don't speak that language you have no idea what they are warning about, what risks are approaching, or what is actually happening on the ground. This is not just inconvenient it can be dangerous. LingoTitles solves this directly. Any video, any language, real-time subtitles in your language so critical information reaches you regardless of the language barrier.
 
 ---
 
