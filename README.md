@@ -2,7 +2,9 @@
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/691d0c87-2082-4492-99d0-6f5a63dfea4e" />
 
-[[![Demo Video]([https://img.youtube.com/vi/DEMO_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=DEMO_VIDEO_ID](https://youtu.be/7eCA78y68_M?si=taUZ6HSGJBisYPlO)](https://youtu.be/7eCA78y68_M?si=taUZ6HSGJBisYPlO)
+## 🎬 Demo Video
+
+[![Watch the Demo](https://img.youtube.com/vi/7eCA78y68_M/maxresdefault.jpg)](https://youtu.be/7eCA78y68_M)
 
 **Demo:** In case the app is not working, you can watch the demo video above to see how LingoTitles works.
 
