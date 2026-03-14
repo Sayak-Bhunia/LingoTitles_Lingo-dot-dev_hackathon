@@ -4,7 +4,7 @@
 
 **Demo:** In case the app is not working, you can watch the demo video above to see how LingoTitles works.
 
-LingoTitles is a Chrome extension that generates real-time AI-powered subtitles for any video on the internet. It captures the video audio, transcribes it using Groq's Whisper model, translates it using Lingo.dev, and overlays the subtitles directly on the video — all in under 2 seconds, completely free.
+LingoTitles is a Chrome extension that generates real-time AI-powered subtitles for any video on the internet. It captures the video audio, transcribes it using Groq's Whisper model, translates it using Lingo.dev, and overlays the subtitles directly on the video all in under 2 seconds, completely free.
 
 ---
 
@@ -68,13 +68,13 @@ lingodev2/
 - Groq API key — free at [console.groq.com](https://console.groq.com)
 - Lingo.dev API key — free at [lingo.dev](https://lingo.dev)
 
-### Step 1 — Clone the repo
+### Step 1 | Clone the repo
 ```bash
 git clone https://github.com/YOURUSERNAME/lingotitles.git
 cd lingotitles
 ```
 
-### Step 2 — Set up the backend
+### Step 2 | Set up the backend
 ```bash
 cd backend
 npm install
@@ -98,14 +98,14 @@ You should see:
    Lingo.dev:   ✓ free & ready
 ```
 
-### Step 3 — Load the extension in Chrome
+### Step 3 | Load the extension in Chrome
 1. Open Chrome and go to `chrome://extensions`
 2. Enable **Developer Mode** (top right toggle)
 3. Click **Load unpacked**
 4. Select the `extension/` folder
 5. The LingoTitles icon will appear in your toolbar
 
-### Step 4 — Use it
+### Step 4 | Use it
 1. Open any video page (YouTube, news site, reels, etc.)
 2. Click the LingoTitles extension icon
 3. Select source language and target language
@@ -124,21 +124,21 @@ You should see:
 
 ## Current Features
 
-- **Any Video** — works on YouTube, news sites, and other third-party video streaming platforms
-- **35+ Languages** — Japanese, Bengali, Marathi, Tamil, Hindi, Arabic, Spanish and more — manually select source and target language
-- **Dual Mode** — show translated only, original only, or both
-- **Adjustable chunk interval** — 1.5s for fast reels, 3s for anime/news, 5s for slow speech
-- **Zero cost** — Groq and Lingo.dev are both free tiers
-- **No login required** — just API keys in your backend `.env`
+- **Any Video**: works on YouTube, news sites, and other third-party video streaming platforms
+- **35+ Languages**: Japanese, Bengali, Marathi, Tamil, Hindi, Arabic, Spanish and more — manually select source and target language
+- **Dual Mode**: show translated only, original only, or both
+- **Adjustable chunk interval**: 1.5s for fast reels, 3s for anime/news, 5s for slow speech
+- **Zero cost**: Groq and Lingo.dev are both free tiers
+- **No login required**: just API keys in your backend `.env`
 
 ---
 
 ## Future Scope
 
-- **Subtitle styling** — font size, color, position customization
-- **Word-by-word streaming** — WebSocket architecture for near real-time subtitles
-- **Mobile companion app** — iOS and Android support
-- **Offline mode** — on-device Whisper model for privacy
+- **Subtitle styling**: font size, color, position customization
+- **Word-by-word streaming**: WebSocket architecture for near real-time subtitles
+- **Mobile companion app**: iOS and Android support
+- **Offline mode**: on-device Whisper model for privacy
 
 ---
 
